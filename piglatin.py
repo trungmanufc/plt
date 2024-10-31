@@ -1,3 +1,6 @@
+
+
+
 class PigLatin:
 
     def __init__(self, phrase: str):
@@ -13,12 +16,8 @@ class PigLatin:
         if self.get_phrase() == '':
             return "nil"
         else:
-            if self.get_phrase()[-1] == 'y':
-                return self.get_phrase() + 'nay'
+            if self.isVowel(self.get_phrase()[0]) == False :
+                h = self.get_phrase()[0]
+                return self.get_phrase()[1:] + h +"ay"
 
-            else:
-                if self.isVowel(self.get_phrase()[-1]):
-                    return self.get_phrase() + "yay"
-                else:
-                    return self.get_phrase() + "ay"
 
