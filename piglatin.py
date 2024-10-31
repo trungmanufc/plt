@@ -7,4 +7,5 @@ class PigLatin:
         return self.phase
 
     def translate(self) -> str:
-        pass
+        if self.get_phrase() == '':
+            return "nil"
